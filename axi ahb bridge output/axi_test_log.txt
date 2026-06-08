@@ -1,0 +1,482 @@
+[SGautam@mavenserver-RH3 sim]$ vi axi_test.log
+# vsim -voptargs="+acc" -c -do "run -all; exit" -l axi_test.log work.axi2ahb_bridge_tb_top "+UVM_TESTNAME=axi_test"
+# Start time: 16:12:12 on May 30,2026
+# ** Note: (vsim-8009) Loading existing optimized design _opt
+# //  Questa Sim-64
+# //  Version 2022.1_2 linux_x86_64 Apr  2 2022
+# //
+# //  Copyright 1991-2022 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  QuestaSim and its associated documentation contain trade
+# //  secrets and commercial or financial information that are the property of
+# //  Mentor Graphics Corporation and are privileged, confidential,
+# //  and exempt from disclosure under the Freedom of Information Act,
+# //  5 U.S.C. Section 552. Furthermore, this information
+# //  is prohibited from disclosure under the Trade Secrets Act,
+# //  18 U.S.C. Section 1905.
+# //
+# Loading sv_std.std
+# Loading work.axi_if(fast)
+# Loading work.ahb_if(fast)
+# Loading work.axi_rst_if(fast)
+# Loading work.ahb_rst_if(fast)
+# Loading mtiUvm.uvm_pkg(fast)
+# Loading work.axi2ahb_pkg(fast)
+# Loading mtiUvm.questa_uvm_pkg(fast)
+# Loading work.axi2ahb_bridge_tb_top(fast)
+# Loading work.axi_if(fast__2)
+# Loading work.ahb_if(fast__2)
+# Loading work.axi_rst_if(fast__2)
+# Loading work.ahb_rst_if(fast__2)
+# Loading work.axi2ahb_bridge_top(fast)
+# Loading work.axi_controller(fast)
+# Loading work.axi2fifo(fast)
+# Loading work.fifo2axi(fast)
+# Loading work.fifo_wrapper(fast)
+# Loading work.id_resp_fifo(fast)
+# Loading work.resp_fifo(fast)
+# Loading work.rdata_fifo(fast)
+# Loading work.size_fifo(fast)
+# Loading work.id_send_fifo(fast)
+# Loading work.write_fifo(fast)
+# Loading work.data_fifo(fast)
+# Loading work.addr_fifo(fast)
+# Loading work.ahb_controller(fast)
+# ** Warning: (vsim-8441) Clocking block output vif.axi_drv_cb.arlen is not legal in this
+# or another expression.
+#    Time: 0 ns  Iteration: 0  Region: /axi2ahb_pkg::axi_driver File: ../AGENT_TOP/AXI/AXI_AGENT/axi_driver.sv Line: 165
+# Loading /home/cad/eda/Mentor_Graphics/Questasim/questasim/uvm-1.1d/linux_x86_64/uvm_dpi.so
+# run -all
+# ----------------------------------------------------------------
+# UVM-1.1d
+# (C) 2007-2013 Mentor Graphics Corporation
+# (C) 2007-2013 Cadence Design Systems, Inc.
+# (C) 2006-2013 Synopsys, Inc.
+# (C) 2011-2013 Cypress Semiconductor Corp.
+# ----------------------------------------------------------------
+#
+#   ***********       IMPORTANT RELEASE NOTES         ************
+#
+#   You are using a version of the UVM library that has been compiled
+#   with `UVM_NO_DEPRECATED undefined.
+#   See http://www.eda.org/svdb/view.php?id=3313 for more details.
+#
+#   You are using a version of the UVM library that has been compiled
+#   with `UVM_OBJECT_MUST_HAVE_CONSTRUCTOR undefined.
+#   See http://www.eda.org/svdb/view.php?id=3770 for more details.
+#
+#       (Specify +UVM_NO_RELNOTES to turn off this notice)
+#
+# UVM_INFO verilog_src/questa_uvm_pkg-1.2/src/questa_uvm_pkg.sv(277) @ 0: reporter [Questa UVM] QUESTA_UVM-1.2.3
+# UVM_INFO verilog_src/questa_uvm_pkg-1.2/src/questa_uvm_pkg.sv(278) @ 0: reporter [Questa UVM]  questa_uvm::init(+struct)
+# UVM_INFO @ 0: reporter [RNTST] Running test axi_test...
+# UVM_INFO ../AGENT_TOP/AHB/AHB_AGENT/ahb_agent.sv(55) @ 0: uvm_test_top.envh.ahb_agnt_top_h[0].ahb_agth[0] [AHB_AGENT] Successfully got ahb_cfg
+# UVM_INFO ../AGENT_TOP/AHB/AHB_AGENT/ahb_driver.sv(24) @ 0: uvm_test_top.envh.ahb_agnt_top_h[0].ahb_agth[0].drv [AHB_DRIVER] Trying to get ahb_cfg
+# UVM_INFO @ 0: reporter [UVMTOP] UVM testbench topology:
+# ------------------------------------------------------------------------------
+# Name                                   Type                        Size  Value
+# ------------------------------------------------------------------------------
+# uvm_test_top                           axi_test                    -     @491
+#   envh                                 environment                 -     @511
+#     ahb_agnt_top_h[0]                  ahb_agent_top               -     @526
+#       ahb_agth[0]                      ahb_agent                   -     @654
+#         drv                            ahb_driver                  -     @691
+#           rsp_port                     uvm_analysis_port           -     @706
+#           seq_item_port                uvm_seq_item_pull_port      -     @698
+#         mon                            ahb_monitor                 -     @674
+#           monitor_port                 uvm_analysis_port           -     @681
+#         seqrh                          ahb_sequencer               -     @714
+#           rsp_export                   uvm_analysis_export         -     @721
+#           seq_item_export              uvm_seq_item_pull_imp       -     @815
+#           arbitration_queue            array                       0     -
+#           lock_queue                   array                       0     -
+#           num_last_reqs                integral                    32    'd1
+#           num_last_rsps                integral                    32    'd1
+#       ahb_rst_agth[0]                  ahb_rst_agent               -     @665
+#         drv                            ahb_rst_driver              -     @848
+#           rsp_port                     uvm_analysis_port           -     @863
+#           seq_item_port                uvm_seq_item_pull_port      -     @855
+#         mon                            ahb_rst_monitor             -     @833
+#           rst_monitor_port             uvm_analysis_port           -     @840
+#         seqrh                          ahb_rst_sequencer           -     @871
+#           rsp_export                   uvm_analysis_export         -     @878
+#           seq_item_export              uvm_seq_item_pull_imp       -     @972
+#           arbitration_queue            array                       0     -
+#           lock_queue                   array                       0     -
+#           num_last_reqs                integral                    32    'd1
+#           num_last_rsps                integral                    32    'd1
+#     axi_agnt_top_h[0]                  axi_agent_top               -     @519
+#       axi_agth[0]                      axi_agent                   -     @992
+#         drv                            axi_driver                  -     @1043
+#           rsp_port                     uvm_analysis_port           -     @1058
+#           seq_item_port                uvm_seq_item_pull_port      -     @1050
+#         mon                            axi_monitor                 -     @1012
+#           axi_monitor_port             uvm_analysis_port           -     @1019
+#           axi_read_data_monitor_port   uvm_analysis_port           -     @1035
+#           axi_write_data_monitor_port  uvm_analysis_port           -     @1027
+#         seqrh                          axi_sequencer               -     @1066
+#           rsp_export                   uvm_analysis_export         -     @1073
+#           seq_item_export              uvm_seq_item_pull_imp       -     @1167
+#           arbitration_queue            array                       0     -
+#           lock_queue                   array                       0     -
+#           num_last_reqs                integral                    32    'd1
+#           num_last_rsps                integral                    32    'd1
+#       axi_rst_agth[0]                  axi_rst_agent               -     @1003
+#         drv                            axi_rst_driver              -     @1199
+#           rsp_port                     uvm_analysis_port           -     @1214
+#           seq_item_port                uvm_seq_item_pull_port      -     @1206
+#         mon                            axi_rst_monitor             -     @1184
+#           rst_monitor_port             uvm_analysis_port           -     @1191
+#         seqr                           axi_rst_sequencer           -     @1222
+#           rsp_export                   uvm_analysis_export         -     @1229
+#           seq_item_export              uvm_seq_item_pull_imp       -     @1323
+#           arbitration_queue            array                       0     -
+#           lock_queue                   array                       0     -
+#           num_last_reqs                integral                    32    'd1
+#           num_last_rsps                integral                    32    'd1
+#     scoreboardh                        scoreboard                  -     @533
+#       fifo_ahb_h[0]                    uvm_tlm_analysis_fifo #(T)  -     @1578
+#         analysis_export                uvm_analysis_imp            -     @1617
+#         get_ap                         uvm_analysis_port           -     @1609
+#         get_peek_export                uvm_get_peek_imp            -     @1593
+#         put_ap                         uvm_analysis_port           -     @1601
+#         put_export                     uvm_put_imp                 -     @1585
+#       fifo_ahb_rst_h[0]                uvm_tlm_analysis_fifo #(T)  -     @1390
+#         analysis_export                uvm_analysis_imp            -     @1429
+#         get_ap                         uvm_analysis_port           -     @1421
+#         get_peek_export                uvm_get_peek_imp            -     @1405
+#         put_ap                         uvm_analysis_port           -     @1413
+#         put_export                     uvm_put_imp                 -     @1397
+#       fifo_axi_h[0]                    uvm_tlm_analysis_fifo #(T)  -     @1437
+#         analysis_export                uvm_analysis_imp            -     @1476
+#         get_ap                         uvm_analysis_port           -     @1468
+#         get_peek_export                uvm_get_peek_imp            -     @1452
+#         put_ap                         uvm_analysis_port           -     @1460
+#         put_export                     uvm_put_imp                 -     @1444
+#       fifo_axi_rdata_h[0]              uvm_tlm_analysis_fifo #(T)  -     @1531
+#         analysis_export                uvm_analysis_imp            -     @1570
+#         get_ap                         uvm_analysis_port           -     @1562
+#         get_peek_export                uvm_get_peek_imp            -     @1546
+#         put_ap                         uvm_analysis_port           -     @1554
+#         put_export                     uvm_put_imp                 -     @1538
+#       fifo_axi_rst_h[0]                uvm_tlm_analysis_fifo #(T)  -     @1343
+#         analysis_export                uvm_analysis_imp            -     @1382
+#         get_ap                         uvm_analysis_port           -     @1374
+#         get_peek_export                uvm_get_peek_imp            -     @1358
+#         put_ap                         uvm_analysis_port           -     @1366
+#         put_export                     uvm_put_imp                 -     @1350
+#       fifo_axi_wdata_h[0]              uvm_tlm_analysis_fifo #(T)  -     @1484
+#         analysis_export                uvm_analysis_imp            -     @1523
+#         get_ap                         uvm_analysis_port           -     @1515
+#         get_peek_export                uvm_get_peek_imp            -     @1499
+#         put_ap                         uvm_analysis_port           -     @1507
+#         put_export                     uvm_put_imp                 -     @1491
+#     vseqrh                             virtual_sequencer           -     @540
+#       rsp_export                       uvm_analysis_export         -     @547
+#       seq_item_export                  uvm_seq_item_pull_imp       -     @641
+#       arbitration_queue                array                       0     -
+#       lock_queue                       array                       0     -
+#       num_last_reqs                    integral                    32    'd1
+#       num_last_rsps                    integral                    32    'd1
+# ------------------------------------------------------------------------------
+#
+# UVM_INFO ../test/test.sv(302) @ 0: uvm_test_top [axi_test] axi_test run phase
+# //////////////////// 0
+# UVM_ERROR ../tb/scoreboard.sv(233) @ 25: uvm_test_top.envh.scoreboardh [scoreboard] axi reset operation is not successful
+# //////////////////// 1
+# UVM_ERROR ../tb/scoreboard.sv(243) @ 40: uvm_test_top.envh.scoreboardh [scoreboard] ahb reset operation not successful
+# UVM_INFO ../AGENT_TOP/AXI/AXI_AGENT/axi_driver.sv(47) @ 85: uvm_test_top.envh.axi_agnt_top_h[0].axi_agth[0].drv [axi_driver] axi_trans :
+#  "----------------------------------------------------------------------------------------------------------
+# Name                           Type       Size  Value
+# ----------------------------------------------------------------------------------------------------------
+# req                            axi_trans  -     @1837
+#   begin_time                   time       64    72
+#   depth                        int        32    'd2
+#   parent sequence (name)       string     4     seqh
+#   parent sequence (full name)  string     58    uvm_test_top.envh.axi_agnt_top_h[0].axi_agth[0].seqrh.seqh
+#   sequencer                    string     53    uvm_test_top.envh.axi_agnt_top_h[0].axi_agth[0].seqrh
+#   aresetn                      integral   1     'b1
+#   awid                         integral   8     'd0
+#   awaddr                       integral   32    'hd11f67e6
+#   awburst                      integral   2     'b0
+#   awlen                        integral   8     'd13
+#   awsize                       integral   3     'd3
+#   awvalid                      integral   1     'b1
+#   awready                      integral   1     'b0
+#   wid                          integral   8     'd0
+#   wdata                        array      14    -
+#     wdata[0]                   integral   64    'h81e849a4bfde1661
+#     wdata[1]                   integral   64    'hfc70d4d51bb380ea
+#     wdata[2]                   integral   64    'hed907739d556b1db
+#     wdata[3]                   integral   64    'hb620e5a367372515
+#     wdata[4]                   integral   64    'h8232f4599f3db204
+#     wdata[5]                   integral   64    'h63ae18accf5ab9cd
+#     wdata[6]                   integral   64    'h593db5fe812cd981
+#     wdata[7]                   integral   64    'h15f8cf2967e04c5
+#     wdata[8]                   integral   64    'h5a815ff3cedecee8
+#     wdata[9]                   integral   64    'h63ebd5ed378a8926
+#     wdata[10]                  integral   64    'h8f757b40f8d94ae5
+#     wdata[11]                  integral   64    'h245a380e892f9a4e
+#     wdata[12]                  integral   64    'h543cb08b7e8eeeed
+#     wdata[13]                  integral   64    'haee41278f43fe52c
+#   wstrb                        array      14    -
+#     wstrb[0]                   integral   8     'hc0
+#     wstrb[1]                   integral   8     'hff
+#     wstrb[2]                   integral   8     'hff
+#     wstrb[3]                   integral   8     'hff
+#     wstrb[4]                   integral   8     'hff
+#     wstrb[5]                   integral   8     'hff
+#     wstrb[6]                   integral   8     'hff
+#     wstrb[7]                   integral   8     'hff
+#     wstrb[8]                   integral   8     'hff
+#     wstrb[9]                   integral   8     'hff
+#     wstrb[10]                  integral   8     'hff
+#     wstrb[11]                  integral   8     'hff
+#     wstrb[12]                  integral   8     'hff
+#     wstrb[13]                  integral   8     'hff
+#   wvalid                       integral   1     'b1
+#   wready                       integral   1     'b0
+#   wlast                        integral   1     'b0
+#   bresp                        integral   2     'b0
+#   bvalid                       integral   1     'b0
+#   bready                       integral   1     'b0
+#   bid                          integral   8     'd0
+#   arid                         integral   8     'd0
+#   araddr                       integral   32    'ha49581b5
+#   arburst                      integral   2     'b1
+#   arlen                        integral   8     'd13
+#   arsize                       integral   3     'd1
+#   arvalid                      integral   1     'b1
+#   arready                      integral   1     'b0
+#   rid                          integral   8     'd0
+#   rdata                        array      0     -
+#   rresp                        array      0     -
+#   rvalid                       integral   1     'b0
+#   rready                       integral   1     'b0
+#   rlast                        integral   1     'b0
+#   temp_wdata                   integral   64    'h0
+#   temp_rdata                   integral   64    'h0
+#   delay_cycles                 integral   32    'd0
+# ----------------------------------------------------------------------------------------------------------
+# "
+# UVM_INFO ../AGENT_TOP/AXI/AXI_AGENT/axi_monitor.sv(153) @ 105: uvm_test_top.envh.axi_agnt_top_h[0].axi_agth[0].mon [AXI_WDATA_MON] PUSHING 81e8000000000000
+# UVM_INFO ../tb/scoreboard.sv(207) @ 105: uvm_test_top.envh.scoreboardh [SB_FIFO] RECEIVED 81e8000000000000
+# UVM_INFO ../AGENT_TOP/AXI/AXI_AGENT/axi_monitor.sv(153) @ 125: uvm_test_top.envh.axi_agnt_top_h[0].axi_agth[0].mon [AXI_WDATA_MON] PUSHING fc70d4d51bb380ea
+# UVM_INFO ../tb/scoreboard.sv(207) @ 125: uvm_test_top.envh.scoreboardh [SB_FIFO] RECEIVED fc70d4d51bb380ea
+# UVM_INFO ../AGENT_TOP/AXI/AXI_AGENT/axi_monitor.sv(153) @ 145: uvm_test_top.envh.axi_agnt_top_h[0].axi_agth[0].mon [AXI_WDATA_MON] PUSHING ed907739d556b1db
+# UVM_INFO ../tb/scoreboard.sv(207) @ 145: uvm_test_top.envh.scoreboardh [SB_FIFO] RECEIVED ed907739d556b1db
+# UVM_INFO ../AGENT_TOP/AXI/AXI_AGENT/axi_monitor.sv(153) @ 165: uvm_test_top.envh.axi_agnt_top_h[0].axi_agth[0].mon [AXI_WDATA_MON] PUSHING b620e5a367372515
+# UVM_INFO ../tb/scoreboard.sv(207) @ 165: uvm_test_top.envh.scoreboardh [SB_FIFO] RECEIVED b620e5a367372515
+# UVM_INFO ../AGENT_TOP/AXI/AXI_AGENT/axi_monitor.sv(153) @ 185: uvm_test_top.envh.axi_agnt_top_h[0].axi_agth[0].mon [AXI_WDATA_MON] PUSHING 8232f4599f3db204
+# UVM_INFO ../tb/scoreboard.sv(207) @ 185: uvm_test_top.envh.scoreboardh [SB_FIFO] RECEIVED 8232f4599f3db204
+# UVM_INFO ../AGENT_TOP/AXI/AXI_AGENT/axi_monitor.sv(153) @ 205: uvm_test_top.envh.axi_agnt_top_h[0].axi_agth[0].mon [AXI_WDATA_MON] PUSHING 63ae18accf5ab9cd
+# UVM_INFO ../tb/scoreboard.sv(207) @ 205: uvm_test_top.envh.scoreboardh [SB_FIFO] RECEIVED 63ae18accf5ab9cd
+# UVM_INFO ../AGENT_TOP/AXI/AXI_AGENT/axi_monitor.sv(153) @ 225: uvm_test_top.envh.axi_agnt_top_h[0].axi_agth[0].mon [AXI_WDATA_MON] PUSHING 593db5fe812cd981
+# UVM_INFO ../tb/scoreboard.sv(207) @ 225: uvm_test_top.envh.scoreboardh [SB_FIFO] RECEIVED 593db5fe812cd981
+# UVM_INFO ../AGENT_TOP/AHB/AHB_AGENT/ahb_monitor.sv(37) @ 232: uvm_test_top.envh.ahb_agnt_top_h[0].ahb_agth[0].mon [AHB_PHASE] ADDR_PHASE HADDR=00000000 HTRANS=2
+# UVM_INFO ../AGENT_TOP/AXI/AXI_AGENT/axi_monitor.sv(153) @ 245: uvm_test_top.envh.axi_agnt_top_h[0].axi_agth[0].mon [AXI_WDATA_MON] PUSHING 015f8cf2967e04c5
+# UVM_INFO ../tb/scoreboard.sv(207) @ 245: uvm_test_top.envh.scoreboardh [SB_FIFO] RECEIVED 015f8cf2967e04c5
+# UVM_INFO ../AGENT_TOP/AHB/AHB_AGENT/ahb_monitor.sv(77) @ 248: uvm_test_top.envh.ahb_agnt_top_h[0].ahb_agth[0].mon [ahb_monitor] ahb_trans :
+#  "---------------------------------
+# Name       Type       Size  Value
+# ---------------------------------
+# ahb_xtn    ahb_trans  -     @1662
+#   hwrite   integral   1     'd0
+#   haddr    integral   32    'd0
+#   htrans   integral   2     2
+#   hsize    integral   3     'd0
+#   hburst   integral   3     'd0
+#   hrdata   integral   64    'd0
+#   hwdata   integral   64    'd0
+#   hready   integral   1     1
+#   hresp    integral   1     'd0
+#   hmaster  integral   1     'd0
+# ---------------------------------
+# "
+# UVM_INFO ../AGENT_TOP/AHB/AHB_AGENT/ahb_monitor.sv(37) @ 248: uvm_test_top.envh.ahb_agnt_top_h[0].ahb_agth[0].mon [AHB_PHASE] ADDR_PHASE HADDR=d11f67e6 HTRANS=2
+# UVM_INFO ../AGENT_TOP/AXI/AXI_AGENT/axi_monitor.sv(153) @ 265: uvm_test_top.envh.axi_agnt_top_h[0].axi_agth[0].mon [AXI_WDATA_MON] PUSHING 5a815ff3cedecee8
+# UVM_INFO ../tb/scoreboard.sv(207) @ 265: uvm_test_top.envh.scoreboardh [SB_FIFO] RECEIVED 5a815ff3cedecee8
+# UVM_INFO ../AGENT_TOP/AXI/AXI_AGENT/axi_monitor.sv(153) @ 285: uvm_test_top.envh.axi_agnt_top_h[0].axi_agth[0].mon [AXI_WDATA_MON] PUSHING 63ebd5ed378a8926
+# UVM_INFO ../tb/scoreboard.sv(207) @ 285: uvm_test_top.envh.scoreboardh [SB_FIFO] RECEIVED 63ebd5ed378a8926
+# UVM_INFO ../AGENT_TOP/AXI/AXI_AGENT/axi_monitor.sv(153) @ 305: uvm_test_top.envh.axi_agnt_top_h[0].axi_agth[0].mon [AXI_WDATA_MON] PUSHING 8f757b40f8d94ae5
+# UVM_INFO ../tb/scoreboard.sv(207) @ 305: uvm_test_top.envh.scoreboardh [SB_FIFO] RECEIVED 8f757b40f8d94ae5
+# UVM_INFO ../AGENT_TOP/AHB/AHB_AGENT/ahb_monitor.sv(56) @ 312: uvm_test_top.envh.ahb_agnt_top_h[0].ahb_agth[0].mon [AHB_DEBUG] ADDR=d11f67e6 DATA=fc70d4d51bb380ea
+# UVM_INFO ../AGENT_TOP/AHB/AHB_AGENT/ahb_monitor.sv(62) @ 312: uvm_test_top.envh.ahb_agnt_top_h[0].ahb_agth[0].mon [AHB_MON] CAPTURED HADDR=d11f67e6 HWDATA=fc70d4d51bb380ea
+# UVM_INFO ../AGENT_TOP/AHB/AHB_AGENT/ahb_monitor.sv(64) @ 312: uvm_test_top.envh.ahb_agnt_top_h[0].ahb_agth[0].mon [AHB_DATA] DATA_PHASE HWDATA=fc70d4d51bb380ea
+# UVM_INFO ../AGENT_TOP/AHB/AHB_AGENT/ahb_monitor.sv(77) @ 312: uvm_test_top.envh.ahb_agnt_top_h[0].ahb_agth[0].mon [ahb_monitor] ahb_trans :
+#  "------------------------------------------------
+# Name       Type       Size  Value
+# ------------------------------------------------
+# ahb_xtn    ahb_trans  -     @1889
+#   hwrite   integral   1     1
+#   haddr    integral   32    3508496358
+#   htrans   integral   2     2
+#   hsize    integral   3     'd3
+#   hburst   integral   3     'd0
+#   hrdata   integral   64    'd0
+#   hwdata   integral   64    18190272906707304682
+#   hready   integral   1     1
+#   hresp    integral   1     'd0
+#   hmaster  integral   1     'd0
+# ------------------------------------------------
+# "
+# UVM_INFO ../AGENT_TOP/AHB/AHB_AGENT/ahb_monitor.sv(37) @ 312: uvm_test_top.envh.ahb_agnt_top_h[0].ahb_agth[0].mon [AHB_PHASE] ADDR_PHASE HADDR=d11f67ee HTRANS=2
+# UVM_INFO ../AGENT_TOP/AXI/AXI_AGENT/axi_monitor.sv(153) @ 325: uvm_test_top.envh.axi_agnt_top_h[0].axi_agth[0].mon [AXI_WDATA_MON] PUSHING 245a380e892f9a4e
+# UVM_INFO ../tb/scoreboard.sv(207) @ 325: uvm_test_top.envh.scoreboardh [SB_FIFO] RECEIVED 245a380e892f9a4e
+# UVM_INFO ../AGENT_TOP/AHB/AHB_AGENT/ahb_monitor.sv(56) @ 328: uvm_test_top.envh.ahb_agnt_top_h[0].ahb_agth[0].mon [AHB_DEBUG] ADDR=d11f67ee DATA=ed907739d556b1db
+# UVM_INFO ../AGENT_TOP/AHB/AHB_AGENT/ahb_monitor.sv(62) @ 328: uvm_test_top.envh.ahb_agnt_top_h[0].ahb_agth[0].mon [AHB_MON] CAPTURED HADDR=d11f67ee HWDATA=ed907739d556b1db
+# UVM_INFO ../AGENT_TOP/AHB/AHB_AGENT/ahb_monitor.sv(64) @ 328: uvm_test_top.envh.ahb_agnt_top_h[0].ahb_agth[0].mon [AHB_DATA] DATA_PHASE HWDATA=ed907739d556b1db
+# UVM_INFO ../AGENT_TOP/AHB/AHB_AGENT/ahb_monitor.sv(77) @ 328: uvm_test_top.envh.ahb_agnt_top_h[0].ahb_agth[0].mon [ahb_monitor] ahb_trans :
+#  "------------------------------------------------
+# Name       Type       Size  Value
+# ------------------------------------------------
+# ahb_xtn    ahb_trans  -     @1905
+#   hwrite   integral   1     1
+#   haddr    integral   32    3508496366
+#   htrans   integral   2     2
+#   hsize    integral   3     'd3
+#   hburst   integral   3     'd0
+#   hrdata   integral   64    'd0
+#   hwdata   integral   64    17118313273911325147
+#   hready   integral   1     1
+#   hresp    integral   1     'd0
+#   hmaster  integral   1     'd0
+# ------------------------------------------------
+# "
+# UVM_INFO ../AGENT_TOP/AHB/AHB_AGENT/ahb_monitor.sv(37) @ 328: uvm_test_top.envh.ahb_agnt_top_h[0].ahb_agth[0].mon [AHB_PHASE] ADDR_PHASE HADDR=d11f67f6 HTRANS=2
+# UVM_INFO ../AGENT_TOP/AXI/AXI_AGENT/axi_monitor.sv(153) @ 345: uvm_test_top.envh.axi_agnt_top_h[0].axi_agth[0].mon [AXI_WDATA_MON] PUSHING 543cb08b7e8eeeed
+# UVM_INFO ../tb/scoreboard.sv(207) @ 345: uvm_test_top.envh.scoreboardh [SB_FIFO] RECEIVED 543cb08b7e8eeeed
+# UVM_INFO ../AGENT_TOP/AXI/AXI_AGENT/axi_monitor.sv(153) @ 365: uvm_test_top.envh.axi_agnt_top_h[0].axi_agth[0].mon [AXI_WDATA_MON] PUSHING aee41278f43fe52c
+# UVM_INFO ../AGENT_TOP/AXI/AXI_AGENT/axi_monitor.sv(156) @ 365: uvm_test_top.envh.axi_agnt_top_h[0].axi_agth[0].mon [axi_monitor] axi_trans :
+#  "---------------------------------------------------
+# Name            Type       Size  Value
+# ---------------------------------------------------
+# axi_xtn         axi_trans  -     @1646
+#   aresetn       integral   1     'b0
+#   awid          integral   8     'd0
+#   awaddr        integral   32    'hd11f67e6
+#   awburst       integral   2     'b0
+#   awlen         integral   8     'd13
+#   awsize        integral   3     'd3
+#   awvalid       integral   1     'b1
+#   awready       integral   1     'b1
+#   wid           integral   8     'd0
+#   wdata         array      14    -
+#     wdata[0]    integral   64    'h81e849a4bfde1661
+#     wdata[1]    integral   64    'hfc70d4d51bb380ea
+#     wdata[2]    integral   64    'hed907739d556b1db
+#     wdata[3]    integral   64    'hb620e5a367372515
+#     wdata[4]    integral   64    'h8232f4599f3db204
+#     wdata[5]    integral   64    'h63ae18accf5ab9cd
+#     wdata[6]    integral   64    'h593db5fe812cd981
+#     wdata[7]    integral   64    'h15f8cf2967e04c5
+#     wdata[8]    integral   64    'h5a815ff3cedecee8
+#     wdata[9]    integral   64    'h63ebd5ed378a8926
+#     wdata[10]   integral   64    'h8f757b40f8d94ae5
+#     wdata[11]   integral   64    'h245a380e892f9a4e
+#     wdata[12]   integral   64    'h543cb08b7e8eeeed
+#     wdata[13]   integral   64    'haee41278f43fe52c
+#   wstrb         array      14    -
+#     wstrb[0]    integral   8     'hc0
+#     wstrb[1]    integral   8     'hff
+#     wstrb[2]    integral   8     'hff
+#     wstrb[3]    integral   8     'hff
+#     wstrb[4]    integral   8     'hff
+#     wstrb[5]    integral   8     'hff
+#     wstrb[6]    integral   8     'hff
+#     wstrb[7]    integral   8     'hff
+#     wstrb[8]    integral   8     'hff
+#     wstrb[9]    integral   8     'hff
+#     wstrb[10]   integral   8     'hff
+#     wstrb[11]   integral   8     'hff
+#     wstrb[12]   integral   8     'hff
+#     wstrb[13]   integral   8     'hff
+#   wvalid        integral   1     'b1
+#   wready        integral   1     'b1
+#   wlast         integral   1     'b1
+#   bresp         integral   2     'b0
+#   bvalid        integral   1     'b0
+#   bready        integral   1     'b0
+#   bid           integral   8     'd0
+#   arid          integral   8     'd0
+#   araddr        integral   32    'h0
+#   arburst       integral   2     'b0
+#   arlen         integral   8     'd0
+#   arsize        integral   3     'd0
+#   arvalid       integral   1     'b0
+#   arready       integral   1     'b0
+#   rid           integral   8     'd0
+#   rdata         array      0     -
+#   rresp         array      0     -
+#   rvalid        integral   1     'b0
+#   rready        integral   1     'b0
+#   rlast         integral   1     'b0
+#   temp_wdata    integral   64    'h0
+#   temp_rdata    integral   64    'h0
+#   delay_cycles  integral   32    'd0
+# ---------------------------------------------------
+# "
+# UVM_INFO ../tb/scoreboard.sv(207) @ 365: uvm_test_top.envh.scoreboardh [SB_FIFO] RECEIVED aee41278f43fe52c
+# UVM_INFO ../AGENT_TOP/AHB/AHB_AGENT/ahb_monitor.sv(56) @ 392: uvm_test_top.envh.ahb_agnt_top_h[0].ahb_agth[0].mon [AHB_DEBUG] ADDR=d11f67f6 DATA=b620e5a367372515
+# UVM_INFO ../AGENT_TOP/AHB/AHB_AGENT/ahb_monitor.sv(62) @ 392: uvm_test_top.envh.ahb_agnt_top_h[0].ahb_agth[0].mon [AHB_MON] CAPTURED HADDR=d11f67f6 HWDATA=b620e5a367372515
+# UVM_INFO ../AGENT_TOP/AHB/AHB_AGENT/ahb_monitor.sv(64) @ 392: uvm_test_top.envh.ahb_agnt_top_h[0].ahb_agth[0].mon [AHB_DATA] DATA_PHASE HWDATA=b620e5a367372515
+# UVM_INFO ../AGENT_TOP/AHB/AHB_AGENT/ahb_monitor.sv(77) @ 392: uvm_test_top.envh.ahb_agnt_top_h[0].ahb_agth[0].mon [ahb_monitor] ahb_trans :
+#  "------------------------------------------------
+# Name       Type       Size  Value
+# ------------------------------------------------
+# ahb_xtn    ahb_trans  -     @1913
+#   hwrite   integral   1     1
+#   haddr    integral   32    3508496374
+#   htrans   integral   2     2
+#   hsize    integral   3     'd3
+#   hburst   integral   3     'd0
+#   hrdata   integral   64    'd0
+#   hwdata   integral   64    13123741804131722517
+#   hready   integral   1     1
+#   hresp    integral   1     'd0
+#   hmaster  integral   1     'd0
+# ------------------------------------------------
+# "
+# UVM_INFO ../AGENT_TOP/AHB/AHB_AGENT/ahb_monitor.sv(37) @ 392: uvm_test_top.envh.ahb_agnt_top_h[0].ahb_agth[0].mon [AHB_PHASE] ADDR_PHASE HADDR=d11f67fe HTRANS=2
+# UVM_INFO ../tb/scoreboard.sv(278) @ 405: uvm_test_top.envh.scoreboardh [scoreboard] data is matched
+# UVM_INFO ../tb/scoreboard.sv(280) @ 405: uvm_test_top.envh.scoreboardh [scoreboard] axi_temporary_rdata: 0 , ahb_hrdata: 0
+# UVM_INFO ../tb/scoreboard.sv(256) @ 405: uvm_test_top.envh.scoreboardh [COMPARE] AXI=81e8000000000000  AHB=fc70d4d51bb380ea
+# UVM_INFO ../tb/scoreboard.sv(257) @ 405: uvm_test_top.envh.scoreboardh [SB_POP] POPPED 81e8000000000000
+# UVM_ERROR ../tb/scoreboard.sv(268) @ 405: uvm_test_top.envh.scoreboardh [scoreboard] data is mismatched
+# UVM_INFO ../tb/scoreboard.sv(256) @ 405: uvm_test_top.envh.scoreboardh [COMPARE] AXI=fc70d4d51bb380ea  AHB=ed907739d556b1db
+# UVM_INFO ../tb/scoreboard.sv(257) @ 405: uvm_test_top.envh.scoreboardh [SB_POP] POPPED fc70d4d51bb380ea
+# UVM_ERROR ../tb/scoreboard.sv(268) @ 405: uvm_test_top.envh.scoreboardh [scoreboard] data is mismatched
+# UVM_INFO ../tb/scoreboard.sv(256) @ 405: uvm_test_top.envh.scoreboardh [COMPARE] AXI=ed907739d556b1db  AHB=b620e5a367372515
+# UVM_INFO ../tb/scoreboard.sv(257) @ 405: uvm_test_top.envh.scoreboardh [SB_POP] POPPED ed907739d556b1db
+# UVM_ERROR ../tb/scoreboard.sv(268) @ 405: uvm_test_top.envh.scoreboardh [scoreboard] data is mismatched
+# UVM_INFO ../AGENT_TOP/AHB/AHB_AGENT/ahb_monitor.sv(56) @ 408: uvm_test_top.envh.ahb_agnt_top_h[0].ahb_agth[0].mon [AHB_DEBUG] ADDR=d11f67fe DATA=8232f4599f3db204
+# UVM_INFO ../AGENT_TOP/AHB/AHB_AGENT/ahb_monitor.sv(62) @ 408: uvm_test_top.envh.ahb_agnt_top_h[0].ahb_agth[0].mon [AHB_MON] CAPTURED HADDR=d11f67fe HWDATA=8232f4599f3db204
+# UVM_INFO ../AGENT_TOP/AHB/AHB_AGENT/ahb_monitor.sv(64) @ 408: uvm_test_top.envh.ahb_agnt_top_h[0].ahb_agth[0].mon [AHB_DATA] DATA_PHASE HWDATA=8232f4599f3db204
+# UVM_INFO ../AGENT_TOP/AHB/AHB_AGENT/ahb_monitor.sv(77) @ 408: uvm_test_top.envh.ahb_agnt_top_h[0].ahb_agth[0].mon [ahb_monitor] ahb_trans :
+#  "-----------------------------------------------
+# Name       Type       Size  Value
+# -----------------------------------------------
+# ahb_xtn    ahb_trans  -     @1929
+#   hwrite   integral   1     1
+#   haddr    integral   32    3508496382
+#   htrans   integral   2     2
+#   hsize    integral   3     'd3
+#   hburst   integral   3     'd0
+#   hrdata   integral   64    'd0
+#   hwdata   integral   64    9381829639527051780
+#   hready   integral   1     1
+#   hresp    integral   1     'd0
+#   hmaster  integral   1     'd0
+# -----------------------------------------------
+# "
+# UVM_INFO ../AGENT_TOP/AHB/AHB_AGENT/ahb_monitor.sv(37) @ 408: uvm_test_top.envh.ahb_agnt_top_h[0].ahb_agth[0].mon [AHB_PHASE] ADDR_PHASE HADDR=d11f6806 HTRANS=2
+# UVM_INFO ../tb/scoreboard.sv(256) @ 408: uvm_test_top.envh.scoreboardh [COMPARE] AXI=b620e5a367372515  AHB=8232f4599f3db204
+# UVM_INFO ../tb/scoreboard.sv(257) @ 408: uvm_test_top.envh.scoreboardh [SB_POP] POPPED b620e5a367372515
+# UVM_ERROR ../tb/scoreboard.sv(268) @ 408: uvm_test_top.envh.scoreboardh [scoreboard] data is mismatched
+# UVM_INFO ../AGENT_TOP/AHB/AHB_AGENT/ahb_monitor.sv(56) @ 472: uvm_test_top.envh.ahb_agnt_top_h[0].ahb_agth[0].mon [AHB_DEBUG] ADDR=d11f6806 DATA=63ae18accf5ab9cd
+# UVM_INFO ../AGENT_TOP/AHB/AHB_AGENT/ahb_monitor.sv(62) @ 472: uvm_test_top.envh.ahb_agnt_top_h[0].ahb_agth[0].mon [AHB_MON] CAPTURED HADDR=d11f6806 HWDATA=63ae18accf5ab9cd
+# UVM_INFO ../AGENT_TOP/AHB/AHB_AGENT/ahb_monitor.sv(64) @ 472: uvm_test_top.envh.ahb_agnt_top_h[0].ahb_agth[0].mon [AHB_DATA] DATA_PHASE HWDATA=63ae18accf5ab9cd
+# UVM_INFO ../AGENT_TOP/AHB/AHB_AGENT/ahb_monitor.sv(77) @ 472: uvm_test_top.envh.ahb_agnt_top_h[0].ahb_agth[0].mon [ahb_monitor] ahb_trans :
+#  "-------------------------------------------------
+# Name       Type       Size  Value
