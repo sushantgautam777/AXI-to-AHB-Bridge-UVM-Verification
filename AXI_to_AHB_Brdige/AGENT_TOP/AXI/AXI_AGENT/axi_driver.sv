@@ -1,0 +1,1 @@
+class axi_driver extends uvm_driver#(axi_trans); endclass
