@@ -1,11 +1,3 @@
-AGENT_TOP  AXI2AHB_RTL  sim  tb  test
-[SGautam@mavenserver-RH3 axi3x3]$ cd AGENT_TOP
-[SGautam@mavenserver-RH3 AGENT_TOP]$ ls
-AHB  AXI
-[SGautam@mavenserver-RH3 AGENT_TOP]$ cd AHB
-[SGautam@mavenserver-RH3 AHB]$ ls
-AHB_AGENT  AHB_RST_AGENT  ahb_top.sv
-[SGautam@mavenserver-RH3 AHB]$ vi ahb_top.sv
 class ahb_agent_top extends uvm_env;
 
   `uvm_component_utils(ahb_agent_top)
